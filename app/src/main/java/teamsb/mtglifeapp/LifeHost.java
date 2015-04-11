@@ -19,15 +19,7 @@ public class LifeHost extends ActionBarActivity {
 
     }
 
-    @Override
-    public void onStop(){
-        super.onStop();
-    }
 
-    @Override
-    public void onRestart(){
-        super.onRestart();
-    }
 
     @Override
     public void onResume(){
@@ -36,16 +28,6 @@ public class LifeHost extends ActionBarActivity {
 
     @Override
     public void onPause(){
-        super.onPause();
-    }
-
-    @Override
-    public void onDestroy(){
-        super.onPause();
-    }
-
-    @Override
-    public void onStart(){
         super.onPause();
     }
 

@@ -7,32 +7,31 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ToggleButton;
+import android.widget.Switch;
 
 
 public class LoginHost extends ActionBarActivity {
 
-    Button gameStart;
-    ToggleButton cmdToggle;
+    Button beginGame;
+    Switch cmdToggle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_host);
 
-        gameStart = (Button) findViewById(R.id.HostB);
-        cmdToggle = (ToggleButton) findViewById(R.id.CommanderButton);
+        beginGame = (Button) findViewById(R.id.HostStart);
+        cmdToggle = (Switch) findViewById(R.id.CommanderSwitch);
 
-
-        gameStart.setOnClickListener(new View.OnClickListener() {
+        beginGame.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(v.getContext(), LifeSlave.class);
+                Intent intent = new Intent(v.getContext(), LifeHost.class);
                 startActivity(intent);
             }
         });
 
-        gameStart.setOnClickListener(new View.OnClickListener() {
+        cmdToggle.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
