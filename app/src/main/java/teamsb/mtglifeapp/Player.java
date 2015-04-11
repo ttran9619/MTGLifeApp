@@ -7,7 +7,7 @@ public class Player {
     private String name;
     private int life;
     private boolean turn;
-    private Player whoseTurn;
+    private int turnCount;
     private int infectCounter;
 
     private final static int DEFAULT_LIFE_TOTAL = 20;
@@ -16,8 +16,8 @@ public class Player {
         this.name = name;
         life = DEFAULT_LIFE_TOTAL;
         turn = false;
-        whoseTurn = null;
         infectCounter = 0;
+
     }
 
     public Player(String name, int life)
@@ -25,7 +25,7 @@ public class Player {
         this.name = name;
         this.life = life;
         turn = false;
-        whoseTurn = null;
+        turnCount = 0;
         infectCounter = 0;
     }
 
@@ -42,8 +42,28 @@ public class Player {
         infectCounter += toAdd;
     }
 
-    public void subtractInfect(int toSub){
+    public void subInfect(int toSub){
         infectCounter -= toSub;
         life += toSub;
+    }
+
+    public int getLife(){
+        return life;
+    }
+
+    public boolean getTurnStatus(){
+        return turn;
+    }
+
+    public int getTurnCount(){
+        return turnCount;
+    }
+
+    public int getInfectCounter(){
+        return infectCounter;
+    }
+
+    public String getName(){
+        return name;
     }
 }
