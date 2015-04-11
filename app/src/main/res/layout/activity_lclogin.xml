@@ -25,9 +25,7 @@
         android:layout_marginTop="46dp"
         android:layout_alignStart="@+id/HostB"
         android:layout_alignEnd="@+id/JoinB" />
-        //android:layout_marginLeft="0dp"
-        //android:layout_marginRight="0dp"
-        android:layout_toEndOf="@+id/textView2" />
+
 
     <Button
         android:layout_width="wrap_content"
