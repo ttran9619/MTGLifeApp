@@ -24,7 +24,7 @@ public class LCLoginAct extends ActionBarActivity {
         Jbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(v.getContext(), LoginHost.class);
+                Intent intent = new Intent(v.getContext(), LoginSlave.class);
                 startActivity(intent);
             }
         });
@@ -32,7 +32,7 @@ public class LCLoginAct extends ActionBarActivity {
         Hbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(v.getContext(), LoginSlave.class);
+                Intent intent = new Intent(v.getContext(), LoginHost.class);
                 startActivity(intent);
             }
         });
