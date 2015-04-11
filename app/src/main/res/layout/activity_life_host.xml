@@ -17,7 +17,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="PASS TURN"
-            android:id="@+id/button2"
+            android:id="@+id/PassButton"
             android:layout_gravity="center" />
 
         <RelativeLayout
@@ -244,7 +244,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/plusOne"
-                android:id="@+id/button7"
+                android:id="@+id/InfectPlusOne"
                 android:layout_alignParentBottom="true"
                 android:layout_alignParentStart="true"
                 android:layout_marginBottom="21dp" />
@@ -254,9 +254,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/plusFive"
-                android:id="@+id/button8"
+                android:id="@+id/InfectPlusFive"
                 android:layout_gravity="right|center_vertical"
-                android:layout_alignTop="@+id/button7"
+                android:layout_alignTop="@+id/InfectPlusOne"
                 android:layout_alignParentEnd="true" />
 
             <Button
@@ -264,9 +264,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/negativeOne"
-                android:id="@+id/button9"
+                android:id="@+id/InfectMinusOne"
                 android:layout_gravity="left|bottom"
-                android:layout_alignTop="@+id/button10"
+                android:layout_alignTop="@+id/InfectMinusFive"
                 android:layout_alignParentStart="true" />
 
             <TextView
@@ -274,7 +274,7 @@
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="Infect"
-                android:id="@+id/textView21"
+                android:id="@+id/InfectTitle"
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true" />
 
@@ -283,9 +283,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/negativeFive"
-                android:id="@+id/button10"
+                android:id="@+id/InfectMinusFive"
                 android:layout_gravity="left|top"
-                android:layout_below="@+id/textView21"
+                android:layout_below="@+id/InfectTitle"
                 android:layout_alignParentEnd="true" />
         </RelativeLayout>
 
@@ -299,7 +299,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/negativeFive"
-                android:id="@+id/button3"
+                android:id="@+id/HealthMinusFive"
                 android:enabled="true"
                 android:layout_marginTop="23dp"
                 android:layout_alignParentTop="true"
@@ -310,8 +310,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/negativeOne"
-                android:id="@+id/button4"
-                android:layout_above="@+id/button6"
+                android:id="@+id/HealthMinusOne"
+                android:layout_above="@+id/HealthPlusOne"
                 android:layout_alignParentStart="true" />
 
             <Button
@@ -319,9 +319,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/plusFive"
-                android:id="@+id/button5"
+                android:id="@+id/HealthPlusFive"
                 android:layout_gravity="center"
-                android:layout_alignTop="@+id/button6"
+                android:layout_alignTop="@+id/HealthPlusOne"
                 android:layout_alignParentEnd="true" />
 
             <Button
@@ -329,9 +329,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/plusOne"
-                android:id="@+id/button6"
+                android:id="@+id/HealthPlusOne"
                 android:layout_marginTop="21dp"
-                android:layout_below="@+id/button3"
+                android:layout_below="@+id/HealthMinusFive"
                 android:layout_alignParentStart="true" />
 
             <TextView
@@ -339,8 +339,8 @@
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="Health"
-                android:id="@+id/textView20"
-                android:layout_above="@+id/button4"
+                android:id="@+id/HealthTitle"
+                android:layout_above="@+id/HealthMinusOne"
                 android:layout_centerHorizontal="true" />
         </RelativeLayout>
 

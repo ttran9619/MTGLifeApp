@@ -5,10 +5,11 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
-import android.widget.ToggleButton;
 
 
 public class LifeHost extends ActionBarActivity {
+
+    Button  infM1, infM5, infP1, infP5;
 
 
 
