@@ -1,17 +1,62 @@
 package teamsb.mtglifeapp;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 
 public class LoginSlave extends ActionBarActivity {
+    Button LogSlvStart;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_slave);
+
+
+        LogSlvStart = (Button) findViewById(R.id.LoginSlaveStart);
+
+        LogSlvStart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), LifeSlave.class);
+                startActivity(intent);
+            }
+        });
+    }
+
+    @Override
+    public void onStop(){
+        super.onStop();
+    }
+
+    @Override
+    public void onRestart(){
+        super.onRestart();
+    }
+
+    @Override
+    public void onResume(){
+        super.onResume();
+    }
+
+    @Override
+    public void onPause(){
+        super.onPause();
+    }
+
+    @Override
+    public void onDestroy(){
+        super.onPause();
+    }
+
+    @Override
+    public void onStart(){
+        super.onPause();
     }
 
 

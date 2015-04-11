@@ -38,6 +38,10 @@ public class LCLoginAct extends ActionBarActivity {
         });
     }
 
+    @Override
+    public void onResume(){
+        super.onResume();
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
