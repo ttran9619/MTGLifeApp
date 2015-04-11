@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Large Text"
-        android:id="@+id/textView5"
+        android:id="@+id/HostLifeCount"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 
@@ -21,8 +21,8 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Large Text"
         android:id="@+id/textView6"
-        android:layout_below="@+id/textView5"
-        android:layout_alignStart="@+id/textView5"
+        android:layout_below="@+id/HostLifeCount"
+        android:layout_alignStart="@+id/HostLifeCount"
         android:layout_marginTop="38dp" />
 
     <TextView
@@ -42,15 +42,15 @@
         android:text="Small Text"
         android:id="@+id/textView8"
         android:layout_centerVertical="true"
-        android:layout_toEndOf="@+id/textView5" />
+        android:layout_toEndOf="@+id/HostLifeCount" />
 
     <Button
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/negativeOne"
-        android:id="@+id/minusOne"
-        android:layout_below="@+id/textView5"
+        android:id="@+id/minusOneHealth"
+        android:layout_below="@+id/HostLifeCount"
         android:layout_alignParentStart="true" />
 
     <Button
@@ -58,7 +58,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/negativeOne"
-        android:id="@+id/minusOneI"
+        android:id="@+id/minusOneInfect"
         android:layout_below="@+id/textView6"
         android:layout_alignParentStart="true" />
 
@@ -67,26 +67,26 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/negativeFive"
-        android:id="@+id/minusFive"
-        android:layout_alignTop="@+id/minusOne"
-        android:layout_toEndOf="@+id/minusOne" />
+        android:id="@+id/minusFiveHealth"
+        android:layout_alignTop="@+id/minusOneHealth"
+        android:layout_toEndOf="@+id/minusOneHealth" />
 
     <Button
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/negativeFive"
-        android:id="@+id/minusFiveI"
-        android:layout_alignTop="@+id/minusOneI"
-        android:layout_toEndOf="@+id/minusOneI" />
+        android:id="@+id/minusFiveInfect"
+        android:layout_alignTop="@+id/minusOneInfect"
+        android:layout_toEndOf="@+id/minusOneInfect" />
 
     <Button
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/plusOne"
-        android:id="@+id/plusOne"
-        android:layout_alignTop="@+id/minusFive"
+        android:id="@+id/plusOneHealth"
+        android:layout_alignTop="@+id/minusFiveHealth"
         android:layout_alignParentEnd="true" />
 
     <Button
@@ -95,16 +95,16 @@
         android:layout_height="wrap_content"
         android:text="@string/plusFive"
         android:id="@+id/plusFive"
-        android:layout_alignTop="@+id/plusOne"
-        android:layout_toStartOf="@+id/plusOne" />
+        android:layout_alignTop="@+id/plusOneHealth"
+        android:layout_toStartOf="@+id/plusOneHealth" />
 
     <Button
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/plusOne"
-        android:id="@+id/plusOneI"
-        android:layout_alignTop="@+id/minusFiveI"
+        android:id="@+id/plusOneInfect"
+        android:layout_alignTop="@+id/minusFiveInfect"
         android:layout_alignParentEnd="true" />
 
     <Button
@@ -113,8 +113,8 @@
         android:layout_height="wrap_content"
         android:text="@string/plusFive"
         android:id="@+id/plusFiveI"
-        android:layout_alignTop="@+id/plusOneI"
-        android:layout_toStartOf="@+id/plusOneI" />
+        android:layout_alignTop="@+id/plusOneInfect"
+        android:layout_toStartOf="@+id/plusOneInfect" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -124,7 +124,7 @@
         android:id="@+id/textView9"
         android:layout_marginBottom="38dp"
         android:layout_alignParentBottom="true"
-        android:layout_toEndOf="@+id/minusOneI" />
+        android:layout_toEndOf="@+id/minusOneInfect" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -143,7 +143,7 @@
         android:id="@+id/textView11"
         android:layout_alignBaseline="@+id/textView10"
         android:layout_alignBottom="@+id/textView10"
-        android:layout_toStartOf="@+id/plusOneI" />
+        android:layout_toStartOf="@+id/plusOneInfect" />
 
 
 </RelativeLayout>
