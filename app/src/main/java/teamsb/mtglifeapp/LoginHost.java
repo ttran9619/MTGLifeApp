@@ -1,17 +1,45 @@
 package teamsb.mtglifeapp;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ToggleButton;
 
 
 public class LoginHost extends ActionBarActivity {
+
+    Button gameStart;
+    ToggleButton cmdToggle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_host);
+
+        gameStart = (Button) findViewById(R.id.HostB);
+        cmdToggle = (ToggleButton) findViewById(R.id.CommanderButton);
+
+        gameStart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), LifeHost.class);
+                startActivity(intent);
+            }
+        });
+
+        cmdToggle.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), PCStart.class);
+                startActivity(intent);
+            }
+        });
+
+
     }
 
 
