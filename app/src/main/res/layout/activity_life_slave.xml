@@ -280,7 +280,7 @@
 
         <RelativeLayout
             android:layout_width="149dp"
-            android:layout_height="118dp"
+            android:layout_height="133dp"
             android:layout_gravity="left|center_vertical">
 
             <Button

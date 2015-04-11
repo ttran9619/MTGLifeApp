@@ -7,49 +7,71 @@
     tools:context="teamsb.mtglifeapp.LoginHost"
     android:id="@+id/SSMTG">
 
-    <Switch
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="New Switch"
-        android:id="@+id/CommanderSwitch"
-        android:layout_marginBottom="49dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="34dp" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Start Game"
-        android:id="@+id/HostStart"
-        android:layout_marginEnd="49dp"
-        android:layout_alignBottom="@+id/CommanderSwitch"
-        android:layout_alignParentEnd="true" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="Commander"
-        android:id="@+id/textView3"
-        android:layout_above="@+id/CommanderSwitch"
-        android:layout_alignStart="@+id/CommanderSwitch" />
-
-    <ListView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/listView"
-        android:layout_centerHorizontal="true"
-        android:layout_above="@+id/textView3"
-        android:layout_below="@+id/textView4" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="You are a host!"
-        android:id="@+id/textView4"
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_toEndOf="@+id/CommanderSwitch"
         android:layout_alignParentTop="true"
-        android:layout_toEndOf="@+id/textView3" />
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="You are a host!"
+            android:id="@+id/textView4"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/textView3"
+            android:layout_gravity="center_horizontal|top" />
+
+        <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="296dp"
+            android:id="@+id/listView"
+            android:layout_centerHorizontal="true"
+            android:layout_above="@+id/textView3"
+            android:layout_below="@+id/textView4"
+            android:layout_gravity="center" />
+
+        <RelativeLayout
+            android:layout_width="151dp"
+            android:layout_height="85dp"
+            android:layout_gravity="left|bottom">
+
+            <Switch
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Switch"
+                android:id="@+id/CommanderSwitch"
+                android:layout_gravity="right|center_vertical"
+                android:layout_below="@+id/textView3"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Commander"
+                android:id="@+id/textView3"
+                android:layout_gravity="right|center_vertical"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="163dp"
+            android:layout_height="82dp"
+            android:layout_gravity="right|bottom">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Start Game"
+                android:id="@+id/HostStart"
+                android:layout_gravity="right|bottom"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+    </FrameLayout>
 
 </RelativeLayout>
