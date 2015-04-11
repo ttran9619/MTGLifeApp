@@ -67,7 +67,7 @@ public class LifeHost extends ActionBarActivity {
         P4Infect.setText(""+player4.getInfectCounter());
         P4TCount = (TextView) findViewById(R.id.Player4TurnCount);
         P4TCount.setText(""+player4.getTurnCount());
-        P4Name = (TextView) findViewById(R.id.Player3Name);
+        P4Name = (TextView) findViewById(R.id.Player4Name);
         P4Name.setText(""+player3.getName());
 
 
@@ -76,6 +76,11 @@ public class LifeHost extends ActionBarActivity {
         heaM5= (Button) findViewById(R.id.HealthMinusFive);
         heaP1= (Button) findViewById(R.id.HealthPlusOne);
         heaP5= (Button) findViewById(R.id.HealthPlusFive);
+
+        infM1= (Button) findViewById(R.id.InfectMinusOne);
+        infM5= (Button) findViewById(R.id.InfectMinusFive);
+        infP1= (Button) findViewById(R.id.InfectPlusOne);
+        infP5= (Button) findViewById(R.id.InfectPlusFive);
 
 
         heaM1.setOnClickListener(new View.OnClickListener() {
@@ -143,6 +148,7 @@ public class LifeHost extends ActionBarActivity {
             public void onClick(View v) {
                 host.addInfect(5);
                 HLife.setText(""+host.getLife());
+                HInfect.setText(""+host.getInfectCounter());
             }
         });
 
