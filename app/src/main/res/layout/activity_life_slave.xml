@@ -15,7 +15,7 @@
 
         <RelativeLayout
             android:layout_width="161dp"
-            android:layout_height="wrap_content"
+            android:layout_height="110dp"
             android:layout_gravity="center_horizontal|top">
 
             <TextView
@@ -62,7 +62,62 @@
 
         <RelativeLayout
             android:layout_width="161dp"
-            android:layout_height="90dp"
+            android:layout_height="109dp"
+            android:layout_gravity="left|bottom" >
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/Player2TurnLight"
+                android:layout_gravity="center_horizontal|bottom"
+                android:checked="false"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Life"
+                android:id="@+id/Player2Life"
+                android:enabled="true"
+                android:textSize="30dp"
+                android:textIsSelectable="true"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Infect"
+                android:id="@+id/Player2Infect"
+                android:focusable="false"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Turn#"
+                android:id="@+id/Player2TurnCount"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Name"
+                android:id="@+id/Player2Name"
+                android:layout_below="@+id/Player2Life"
+                android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="161dp"
+            android:layout_height="109dp"
             android:layout_gravity="center_horizontal|bottom" >
 
             <TextView
@@ -70,7 +125,7 @@
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="Life"
-                android:id="@+id/textView17"
+                android:id="@+id/Player3Life"
                 android:enabled="true"
                 android:textSize="30dp"
                 android:textIsSelectable="true"
@@ -82,7 +137,7 @@
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="Infect"
-                android:id="@+id/textView18"
+                android:id="@+id/Player3Infect"
                 android:focusable="false"
                 android:layout_alignParentBottom="true"
                 android:layout_alignParentStart="true" />
@@ -92,14 +147,14 @@
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="Turn#"
-                android:id="@+id/textView19"
+                android:id="@+id/Player3TurnCount"
                 android:layout_alignParentBottom="true"
                 android:layout_alignParentEnd="true" />
 
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/checkBox3"
+                android:id="@+id/Player3TurnLight"
                 android:layout_gravity="center_horizontal|bottom"
                 android:checked="false"
                 android:layout_alignParentBottom="true"
@@ -110,75 +165,20 @@
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="Name"
-                android:id="@+id/textView20"
-                android:layout_below="@+id/textView17"
+                android:id="@+id/Player3Name"
+                android:layout_below="@+id/Player3Life"
                 android:layout_centerHorizontal="true" />
         </RelativeLayout>
 
         <RelativeLayout
             android:layout_width="161dp"
-            android:layout_height="90dp"
-            android:layout_gravity="left|bottom" >
-
-            <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/checkBox"
-                android:layout_gravity="center_horizontal|bottom"
-                android:checked="false"
-                android:layout_alignParentBottom="true"
-                android:layout_centerHorizontal="true" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Life"
-                android:id="@+id/textView5"
-                android:enabled="true"
-                android:textSize="30dp"
-                android:textIsSelectable="true"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Infect"
-                android:id="@+id/textView12"
-                android:focusable="false"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentStart="true" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Turn#"
-                android:id="@+id/textView13"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentEnd="true" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Name"
-                android:id="@+id/textView14"
-                android:layout_above="@+id/checkBox"
-                android:layout_alignStart="@+id/textView5" />
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:layout_width="161dp"
-            android:layout_height="90dp"
+            android:layout_height="109dp"
             android:layout_gravity="right|bottom" >
 
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/checkBox2"
+                android:id="@+id/Player4TurnLight"
                 android:layout_gravity="center_horizontal|bottom"
                 android:checked="false"
                 android:layout_alignParentBottom="true"
@@ -189,7 +189,7 @@
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="Life"
-                android:id="@+id/textView15"
+                android:id="@+id/Player4Life"
                 android:enabled="true"
                 android:textSize="30dp"
                 android:textIsSelectable="true"
@@ -201,7 +201,7 @@
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="Infect"
-                android:id="@+id/textView16"
+                android:id="@+id/Player4Infect"
                 android:focusable="false"
                 android:layout_alignParentBottom="true"
                 android:layout_alignParentStart="true" />
@@ -211,7 +211,7 @@
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="Turn#"
-                android:id="@+id/textView21"
+                android:id="@+id/Player4TurnCount"
                 android:layout_alignParentBottom="true"
                 android:layout_alignParentEnd="true" />
 
@@ -220,9 +220,9 @@
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="Name"
-                android:id="@+id/textView22"
-                android:layout_centerVertical="true"
-                android:layout_alignEnd="@+id/textView15" />
+                android:id="@+id/Player4Name"
+                android:layout_below="@+id/Player4Life"
+                android:layout_centerHorizontal="true" />
         </RelativeLayout>
 
         <Button
@@ -234,38 +234,28 @@
 
         <RelativeLayout
             android:layout_width="149dp"
-            android:layout_height="118dp"
-            android:layout_gravity="right|center_vertical"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true">
+            android:layout_height="150dp"
+            android:layout_gravity="right|center_vertical">
 
             <Button
                 style="?android:attr/buttonStyleSmall"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/plusOne"
-                android:id="@+id/plusOneInfect"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentStart="true" />
-
-            <Button
-                style="?android:attr/buttonStyleSmall"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/plusFive"
-                android:id="@+id/plusFiveInfect"
-                android:layout_gravity="right|center_vertical"
+                android:text="@string/negativeFive"
+                android:id="@+id/minusFiveHealth"
+                android:enabled="true"
+                android:layout_marginTop="23dp"
                 android:layout_alignParentTop="true"
-                android:layout_alignParentStart="true" />
+                android:layout_alignParentEnd="true" />
 
             <Button
                 style="?android:attr/buttonStyleSmall"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/plusOne"
-                android:id="@+id/plusOneHealth"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentEnd="true" />
+                android:text="@string/negativeOne"
+                android:id="@+id/minusOneHealth"
+                android:layout_above="@+id/plusOneHealth"
+                android:layout_alignParentStart="true" />
 
             <Button
                 style="?android:attr/buttonStyleSmall"
@@ -274,33 +264,58 @@
                 android:text="@string/plusFive"
                 android:id="@+id/plusFiveHealth"
                 android:layout_gravity="center"
-                android:layout_alignParentTop="true"
-                android:layout_alignStart="@+id/plusOneHealth" />
+                android:layout_alignTop="@+id/plusOneHealth"
+                android:layout_alignParentEnd="true" />
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/plusOne"
+                android:id="@+id/plusOneHealth"
+                android:layout_below="@+id/minusFiveHealth"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="16dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Health"
+                android:id="@+id/textView23"
+                android:layout_above="@+id/minusOneHealth"
+                android:layout_centerHorizontal="true" />
+
         </RelativeLayout>
 
         <RelativeLayout
             android:layout_width="149dp"
-            android:layout_height="133dp"
-            android:layout_gravity="left|center_vertical">
+            android:layout_height="164dp"
+            android:layout_gravity="left|center_vertical"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/">
 
             <Button
                 style="?android:attr/buttonStyleSmall"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/negativeFive"
-                android:id="@+id/minusFiveHealth"
-                android:layout_alignParentBottom="true"
+                android:text="@string/plusOne"
+                android:id="@+id/plusOneInfect"
+                android:layout_below="@+id/minusOneInfect"
                 android:layout_alignParentStart="true"
-                android:enabled="true" />
+                android:layout_marginTop="16dp" />
 
             <Button
                 style="?android:attr/buttonStyleSmall"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/negativeOne"
-                android:id="@+id/minusOneHealth"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentStart="true" />
+                android:text="@string/plusFive"
+                android:id="@+id/plusFiveInfect"
+                android:layout_gravity="right|center_vertical"
+                android:layout_alignBaseline="@+id/plusOneInfect"
+                android:layout_alignBottom="@+id/plusOneInfect"
+                android:layout_alignParentEnd="true" />
 
             <Button
                 style="?android:attr/buttonStyleSmall"
@@ -309,8 +324,8 @@
                 android:text="@string/negativeOne"
                 android:id="@+id/minusOneInfect"
                 android:layout_gravity="left|bottom"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentEnd="true" />
+                android:layout_alignTop="@+id/minusFiveInfect"
+                android:layout_alignParentStart="true" />
 
             <Button
                 style="?android:attr/buttonStyleSmall"
@@ -319,9 +334,18 @@
                 android:text="@string/negativeFive"
                 android:id="@+id/minusFiveInfect"
                 android:layout_gravity="center"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentEnd="true" />
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="27dp" />
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Infect"
+                android:id="@+id/textView24"
+                android:layout_above="@+id/minusOneInfect"
+                android:layout_centerHorizontal="true" />
         </RelativeLayout>
 
     </FrameLayout>
