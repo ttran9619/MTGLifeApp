@@ -5,7 +5,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context="teamsb.mtglifeapp.LoginHost"
-    android:id="@+id/">
+    android:id="@+id/SSMTG">
 
     <Switch
         android:layout_width="wrap_content"
