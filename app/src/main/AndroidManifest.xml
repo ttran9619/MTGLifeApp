@@ -59,6 +59,7 @@
         <activity
             android:name=".LifeHost"
             android:label="@string/title_activity_life_host"
+            android:screenOrientation="landscape"
             android:parentActivityName=".LoginHost" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -67,6 +68,7 @@
         <activity
             android:name=".LifeSlave"
             android:label="@string/title_activity_life_slave"
+            android:screenOrientation="landscape"
             android:parentActivityName=".LoginSlave" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
