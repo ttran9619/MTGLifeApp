@@ -30,7 +30,7 @@
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="Life"
-                android:id="@+id/textView5"
+                android:id="@+id/HostLife"
                 android:enabled="true"
                 android:textSize="45dp"
                 android:textIsSelectable="true"
@@ -42,9 +42,9 @@
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="Infect"
-                android:id="@+id/textView6"
+                android:id="@+id/HostInfect"
                 android:focusable="false"
-                android:layout_alignTop="@+id/checkBox"
+                android:layout_alignTop="@+id/HostTurnLight"
                 android:layout_alignParentStart="true" />
 
             <TextView
@@ -52,17 +52,17 @@
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="Turn#"
-                android:id="@+id/textView7"
-                android:layout_alignTop="@+id/checkBox"
+                android:id="@+id/HostTurnCount"
+                android:layout_alignTop="@+id/HostTurnLight"
                 android:layout_alignParentEnd="true" />
 
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/checkBox"
+                android:id="@+id/HostTurnLight"
                 android:layout_gravity="center_horizontal|bottom"
                 android:checked="false"
-                android:layout_below="@+id/textView5"
+                android:layout_below="@+id/HostLife"
                 android:layout_centerHorizontal="true" />
         </RelativeLayout>
 
@@ -74,10 +74,10 @@
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/checkBox2"
+                android:id="@+id/Player2TurnLight"
                 android:layout_gravity="center_horizontal|bottom"
                 android:checked="false"
-                android:layout_below="@+id/textView11"
+                android:layout_below="@+id/Player2Name"
                 android:layout_centerHorizontal="true" />
 
             <TextView
@@ -85,7 +85,7 @@
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="Life"
-                android:id="@+id/textView8"
+                android:id="@+id/Player2Life"
                 android:enabled="true"
                 android:textSize="30dp"
                 android:textIsSelectable="true"
@@ -97,27 +97,27 @@
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="Infect"
-                android:id="@+id/textView9"
+                android:id="@+id/Player2Infect"
                 android:focusable="false"
-                android:layout_below="@+id/textView11"
-                android:layout_toStartOf="@+id/textView8" />
+                android:layout_below="@+id/Player2Name"
+                android:layout_toStartOf="@+id/Player2Life" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="Turn#"
-                android:id="@+id/textView10"
-                android:layout_below="@+id/textView11"
-                android:layout_toEndOf="@+id/textView11" />
+                android:id="@+id/Player2TurnCount"
+                android:layout_below="@+id/Player2Name"
+                android:layout_toEndOf="@+id/Player2Name" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="Name"
-                android:id="@+id/textView11"
-                android:layout_below="@+id/textView8"
+                android:id="@+id/Player2Name"
+                android:layout_below="@+id/Player2Life"
                 android:layout_centerHorizontal="true" />
         </RelativeLayout>
 
@@ -129,10 +129,10 @@
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/checkBox3"
+                android:id="@+id/Player3TurnCheck"
                 android:layout_gravity="center_horizontal|bottom"
                 android:checked="false"
-                android:layout_below="@+id/textView15"
+                android:layout_below="@+id/Player3Name"
                 android:layout_centerHorizontal="true" />
 
             <TextView
@@ -140,7 +140,7 @@
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="Life"
-                android:id="@+id/textView12"
+                android:id="@+id/Player3Life"
                 android:enabled="true"
                 android:textSize="30dp"
                 android:textIsSelectable="true"
@@ -152,27 +152,27 @@
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="Infect"
-                android:id="@+id/textView13"
+                android:id="@+id/Player3Infect"
                 android:focusable="false"
-                android:layout_below="@+id/textView15"
-                android:layout_toStartOf="@+id/textView15" />
+                android:layout_below="@+id/Player3Name"
+                android:layout_toStartOf="@+id/Player3Name" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="Turn#"
-                android:id="@+id/textView14"
-                android:layout_below="@+id/textView15"
-                android:layout_toEndOf="@+id/textView12" />
+                android:id="@+id/Player3TurnCount"
+                android:layout_below="@+id/Player3Name"
+                android:layout_toEndOf="@+id/Player3Life" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="Name"
-                android:id="@+id/textView15"
-                android:layout_below="@+id/textView12"
+                android:id="@+id/Player3Name"
+                android:layout_below="@+id/Player3Life"
                 android:layout_centerHorizontal="true" />
         </RelativeLayout>
 
@@ -184,10 +184,10 @@
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/checkBox4"
+                android:id="@+id/Player4TurnLight"
                 android:layout_gravity="center_horizontal|bottom"
                 android:checked="false"
-                android:layout_below="@+id/textView19"
+                android:layout_below="@+id/Player4Name"
                 android:layout_centerHorizontal="true" />
 
             <TextView
@@ -195,7 +195,7 @@
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="Life"
-                android:id="@+id/textView16"
+                android:id="@+id/Player4Life"
                 android:enabled="true"
                 android:textSize="30dp"
                 android:textIsSelectable="true"
@@ -207,27 +207,27 @@
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="Infect"
-                android:id="@+id/textView17"
+                android:id="@+id/Player4Infect"
                 android:focusable="false"
-                android:layout_below="@+id/textView19"
-                android:layout_toStartOf="@+id/textView19" />
+                android:layout_below="@+id/Player4Name"
+                android:layout_toStartOf="@+id/Player4Name" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="Turn#"
-                android:id="@+id/textView18"
-                android:layout_below="@+id/textView19"
-                android:layout_toEndOf="@+id/textView19" />
+                android:id="@+id/Player4TurnCount"
+                android:layout_below="@+id/Player4Name"
+                android:layout_toEndOf="@+id/Player4Name" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="Name"
-                android:id="@+id/textView19"
-                android:layout_below="@+id/textView16"
+                android:id="@+id/Player4Name"
+                android:layout_below="@+id/Player4Life"
                 android:layout_centerHorizontal="true" />
         </RelativeLayout>
 

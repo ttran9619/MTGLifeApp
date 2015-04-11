@@ -1,15 +1,23 @@
 package teamsb.mtglifeapp;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 
 public class LifeHost extends ActionBarActivity {
 
     Button  infM1, infM5, infP1, infP5;
+    Button  heaM1, heaM5, heaP1, heaP5;
+    Button pass;
+
+    TextView HLife;
+
 
 
 
@@ -17,6 +25,25 @@ public class LifeHost extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_life_host);
+
+        HLife = (TextView) findViewById(R.id.HostLife);
+
+
+
+        heaM1= (Button) findViewById(R.id.HealthMinusOne);
+        heaM5= (Button) findViewById(R.id.HealthMinusFive);
+        heaP1= (Button) findViewById(R.id.HealthPlusOne);
+        heaP5= (Button) findViewById(R.id.HealthPlusFive);
+
+
+        heaM1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                int num = 1;
+                HLife.setText(""+num);
+            }
+        });
 
     }
 
