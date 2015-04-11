@@ -16,6 +16,46 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".LCLoginAct"
+            android:label="@string/title_activity_lclogin"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="teamsb.mtglifeapp.MainActivity" />
+        </activity>
+        <activity
+            android:name=".LoginHost"
+            android:label="@string/title_activity_login_host"
+            android:parentActivityName=".LCLoginAct" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="teamsb.mtglifeapp.LCLoginAct" />
+        </activity>
+        <activity
+            android:name=".LoginSlave"
+            android:label="@string/title_activity_login_slave"
+            android:parentActivityName=".LCLoginAct" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="teamsb.mtglifeapp.LCLoginAct" />
+        </activity>
+        <activity
+            android:name=".LifeHost"
+            android:label="@string/title_activity_life_host"
+            android:parentActivityName=".LoginHost" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="teamsb.mtglifeapp.LoginHost" />
+        </activity>
+        <activity
+            android:name=".LifeSlave"
+            android:label="@string/title_activity_life_slave"
+            android:parentActivityName=".LoginSlave" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="teamsb.mtglifeapp.LoginSlave" />
+        </activity>
     </application>
 
 </manifest>
