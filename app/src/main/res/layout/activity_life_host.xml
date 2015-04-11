@@ -45,9 +45,9 @@
                 android:text="Infect"
                 android:id="@+id/HostInfect"
                 android:focusable="false"
-                android:layout_alignTop="@+id/HostTurnLight"
                 android:layout_alignParentStart="true"
-                android:textColor="#10721e" />
+                android:textColor="#10721e"
+                android:layout_below="@+id/HostLife" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -55,9 +55,9 @@
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="Turn#"
                 android:id="@+id/HostTurnCount"
-                android:layout_alignTop="@+id/HostTurnLight"
                 android:layout_alignParentEnd="true"
-                android:textColor="#0000ff" />
+                android:textColor="#0000ff"
+                android:layout_below="@+id/HostLife" />
 
             <CheckBox
                 android:layout_width="wrap_content"
@@ -65,8 +65,10 @@
                 android:id="@+id/HostTurnLight"
                 android:layout_gravity="center_horizontal|bottom"
                 android:checked="false"
+                android:clickable="false"
                 android:layout_below="@+id/HostLife"
                 android:layout_centerHorizontal="true" />
+
         </RelativeLayout>
 
         <RelativeLayout
@@ -81,7 +83,8 @@
                 android:layout_gravity="center_horizontal|bottom"
                 android:checked="false"
                 android:layout_below="@+id/Player2Name"
-                android:layout_centerHorizontal="true" />
+                android:layout_centerHorizontal="true"
+                android:clickable="false" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -133,15 +136,6 @@
             android:layout_height="109dp"
             android:layout_gravity="center_horizontal|bottom" >
 
-            <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/Player3TurnCheck"
-                android:layout_gravity="center_horizontal|bottom"
-                android:checked="false"
-                android:layout_below="@+id/Player3Name"
-                android:layout_centerHorizontal="true" />
-
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -184,6 +178,16 @@
                 android:id="@+id/Player3Name"
                 android:layout_below="@+id/Player3Life"
                 android:layout_centerHorizontal="true" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/Player3TurnLight"
+                android:layout_gravity="center_horizontal|bottom"
+                android:checked="false"
+                android:clickable="false"
+                android:layout_alignTop="@+id/Player3Infect"
+                android:layout_centerHorizontal="true" />
         </RelativeLayout>
 
         <RelativeLayout
@@ -198,7 +202,8 @@
                 android:layout_gravity="center_horizontal|bottom"
                 android:checked="false"
                 android:layout_below="@+id/Player4Name"
-                android:layout_centerHorizontal="true" />
+                android:layout_centerHorizontal="true"
+                android:clickable="false" />
 
             <TextView
                 android:layout_width="wrap_content"

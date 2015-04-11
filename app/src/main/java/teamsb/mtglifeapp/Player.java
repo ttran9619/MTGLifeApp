@@ -55,8 +55,19 @@ public class Player {
         return turn;
     }
 
+    public void passTurn(){
+        turn = false;
+    }
+    public void takeTurn(){
+        turn = true;
+    }
+
     public int getTurnCount(){
         return turnCount;
+    }
+
+    public void addTurnCount(){
+        turnCount+=1;
     }
 
     public int getInfectCounter(){

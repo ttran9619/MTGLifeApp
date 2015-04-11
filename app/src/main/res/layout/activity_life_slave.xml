@@ -22,7 +22,7 @@
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="Life"
-                android:id="@+id/GuestLifeCount"
+                android:id="@+id/GuestLife"
                 android:enabled="true"
                 android:textSize="45dp"
                 android:textIsSelectable="true"
@@ -35,7 +35,7 @@
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="Infect"
-                android:id="@+id/GuestInfectCount"
+                android:id="@+id/GuestInfect"
                 android:focusable="false"
                 android:layout_alignBaseline="@+id/GuestTurnCount"
                 android:layout_alignBottom="@+id/GuestTurnCount"
@@ -48,8 +48,8 @@
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="Turn"
                 android:id="@+id/GuestTurnCount"
-                android:layout_below="@+id/GuestLifeCount"
-                android:layout_toEndOf="@+id/GuestLifeCount"
+                android:layout_below="@+id/GuestLife"
+                android:layout_toEndOf="@+id/GuestLife"
                 android:textColor="#0000ff" />
 
             <CheckBox
@@ -58,8 +58,9 @@
                 android:id="@+id/GuestTurnLight"
                 android:layout_gravity="center_horizontal|bottom"
                 android:checked="false"
-                android:layout_below="@+id/GuestLifeCount"
-                android:layout_centerHorizontal="true" />
+                android:layout_below="@+id/GuestLife"
+                android:layout_centerHorizontal="true"
+                android:nestedScrollingEnabled="true" />
 
         </RelativeLayout>
 
@@ -106,7 +107,7 @@
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="Turn#"
-                android:id="@+id/OtherTurnCount"
+                android:id="@+id/Other1TurnCount"
                 android:layout_below="@+id/Other1Name"
                 android:layout_toEndOf="@+id/Other1Name"
                 android:textColor="#0000ff" />
@@ -211,7 +212,7 @@
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="Infect"
-                android:id="@+id/Player4Infect"
+                android:id="@+id/Other2Infect"
                 android:focusable="false"
                 android:layout_below="@+id/Player4Name"
                 android:layout_alignParentStart="true"
@@ -222,7 +223,7 @@
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="Turn#"
-                android:id="@+id/Player4TurnCount"
+                android:id="@+id/Other2TurnCount"
                 android:layout_alignTop="@+id/Player4TurnLight"
                 android:layout_toEndOf="@+id/Player4Name"
                 android:textColor="#0000ff" />

@@ -8,14 +8,14 @@
 
     <TextView android:text="@string/hello_world" android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/GuestLifeCount" />
+        android:id="@+id/GuestLife" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="New Button"
         android:id="@+id/LoginSlaveStart"
-        android:layout_below="@+id/GuestLifeCount"
+        android:layout_below="@+id/GuestLife"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="113dp" />
 

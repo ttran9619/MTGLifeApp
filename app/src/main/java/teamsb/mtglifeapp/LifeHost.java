@@ -1,12 +1,12 @@
 package teamsb.mtglifeapp;
 
-import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.TextView;
 
 
@@ -20,6 +20,8 @@ public class LifeHost extends ActionBarActivity {
     TextView P2Life, P2Infect, P2TCount, P2Name;
     TextView P3Life, P3Infect, P3TCount, P3Name;
     TextView P4Life, P4Infect, P4TCount, P4Name;
+
+    CheckBox HostLight, Player2Light, Player3Light, Player4Light;
 
 
 
@@ -81,6 +83,16 @@ public class LifeHost extends ActionBarActivity {
         infM5= (Button) findViewById(R.id.InfectMinusFive);
         infP1= (Button) findViewById(R.id.InfectPlusOne);
         infP5= (Button) findViewById(R.id.InfectPlusFive);
+
+        pass = (Button) findViewById(R.id.PassButton);
+
+        HostLight = (CheckBox) findViewById(R.id.HostTurnLight);
+        Player2Light = (CheckBox) findViewById(R.id.Player2TurnLight);
+        Player3Light = (CheckBox) findViewById(R.id.Player3TurnLight);
+        Player4Light = (CheckBox) findViewById(R.id.Player4TurnLight);
+
+        HostLight.setChecked(true);
+        host.takeTurn();
 
 
         heaM1.setOnClickListener(new View.OnClickListener() {
@@ -149,6 +161,24 @@ public class LifeHost extends ActionBarActivity {
                 host.addInfect(5);
                 HLife.setText(""+host.getLife());
                 HInfect.setText(""+host.getInfectCounter());
+            }
+        });
+
+        pass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                if(host.getTurnStatus()){
+                    host.passTurn();
+                    player2.takeTurn();
+
+                    host.addTurnCount();;
+                    HTCount.setText(""+host.getTurnCount());
+
+                    HostLight.setChecked(host.getTurnStatus());
+                    Player2Light.setChecked(player2.getTurnStatus());
+                }
+
             }
         });
 
