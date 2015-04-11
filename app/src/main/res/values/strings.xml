@@ -8,4 +8,5 @@
     <string name="title_activity_login_slave">LoginSlave</string>
     <string name="title_activity_life_host">LifeHost</string>
     <string name="title_activity_life_slave">LifeSlave</string>
+    <string name="title_activity_pcstart">PCStart</string>
 </resources>

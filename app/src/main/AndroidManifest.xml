@@ -56,6 +56,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="teamsb.mtglifeapp.LoginSlave" />
         </activity>
+        <activity
+            android:name=".PCStart"
+            android:label="@string/title_activity_pcstart"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="teamsb.mtglifeapp.MainActivity" />
+        </activity>
     </application>
 
 </manifest>
