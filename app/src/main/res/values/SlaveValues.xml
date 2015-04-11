@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="HostName">HOST</string>
+    <integer name="HostLife">20</integer>
+    <integer name="HostInfect">0</integer>
+    <integer name="HostTurn">0</integer>
+    <bool name="HostCheck">false</bool>
+
+    <string name="GuestName">GUEST</string>
+    <integer name="GuestLife">20</integer>
+    <integer name="GuestInfect">0</integer>
+    <integer name="GuestTurn">0</integer>
+    <bool name="GuestCheck">false</bool>
+
+    <string name="Other1Name">OTHER1</string>
+    <integer name="Other1Life">20</integer>
+    <integer name="Other1Infect">0</integer>
+    <integer name="Other1Turn">0</integer>
+    <bool name="Other1Check">false</bool>
+
+    <string name="Other2Name">OTHER2</string>
+    <integer name="Other2Life">20</integer>
+    <integer name="Other2Infect">0</integer>
+    <integer name="Other2Turn">0</integer>
+    <bool name="Other2Check">false</bool>
+
+</resources>
