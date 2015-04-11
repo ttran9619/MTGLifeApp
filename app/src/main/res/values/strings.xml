@@ -9,4 +9,8 @@
     <string name="title_activity_life_host">LifeHost</string>
     <string name="title_activity_life_slave">LifeSlave</string>
     <string name="title_activity_pcstart">PCStart</string>
+    <string name="negativeOne">-1</string>
+    <string name="negativeFive">-5</string>
+    <string name="plusOne">+1</string>
+    <string name="plusFive">+5</string>
 </resources>
