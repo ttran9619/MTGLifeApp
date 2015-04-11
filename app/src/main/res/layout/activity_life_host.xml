@@ -44,7 +44,7 @@
                 android:text="Infect"
                 android:id="@+id/textView6"
                 android:focusable="false"
-                android:layout_below="@+id/checkBox"
+                android:layout_alignTop="@+id/checkBox"
                 android:layout_alignParentStart="true" />
 
             <TextView
@@ -53,7 +53,7 @@
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="Turn#"
                 android:id="@+id/textView7"
-                android:layout_below="@+id/checkBox"
+                android:layout_alignTop="@+id/checkBox"
                 android:layout_alignParentEnd="true" />
 
             <CheckBox
@@ -77,7 +77,7 @@
                 android:id="@+id/checkBox2"
                 android:layout_gravity="center_horizontal|bottom"
                 android:checked="false"
-                android:layout_alignParentBottom="true"
+                android:layout_below="@+id/textView11"
                 android:layout_centerHorizontal="true" />
 
             <TextView
@@ -99,8 +99,8 @@
                 android:text="Infect"
                 android:id="@+id/textView9"
                 android:focusable="false"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentStart="true" />
+                android:layout_below="@+id/textView11"
+                android:layout_toStartOf="@+id/textView8" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -108,8 +108,8 @@
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="Turn#"
                 android:id="@+id/textView10"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentEnd="true" />
+                android:layout_below="@+id/textView11"
+                android:layout_toEndOf="@+id/textView11" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -132,7 +132,7 @@
                 android:id="@+id/checkBox3"
                 android:layout_gravity="center_horizontal|bottom"
                 android:checked="false"
-                android:layout_alignParentBottom="true"
+                android:layout_below="@+id/textView15"
                 android:layout_centerHorizontal="true" />
 
             <TextView
@@ -154,8 +154,8 @@
                 android:text="Infect"
                 android:id="@+id/textView13"
                 android:focusable="false"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentStart="true" />
+                android:layout_below="@+id/textView15"
+                android:layout_toStartOf="@+id/textView15" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -163,8 +163,8 @@
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="Turn#"
                 android:id="@+id/textView14"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentEnd="true" />
+                android:layout_below="@+id/textView15"
+                android:layout_toEndOf="@+id/textView12" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -187,7 +187,7 @@
                 android:id="@+id/checkBox4"
                 android:layout_gravity="center_horizontal|bottom"
                 android:checked="false"
-                android:layout_alignParentBottom="true"
+                android:layout_below="@+id/textView19"
                 android:layout_centerHorizontal="true" />
 
             <TextView
@@ -209,8 +209,8 @@
                 android:text="Infect"
                 android:id="@+id/textView17"
                 android:focusable="false"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentStart="true" />
+                android:layout_below="@+id/textView19"
+                android:layout_toStartOf="@+id/textView19" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -218,8 +218,8 @@
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="Turn#"
                 android:id="@+id/textView18"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentEnd="true" />
+                android:layout_below="@+id/textView19"
+                android:layout_toEndOf="@+id/textView19" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -234,62 +234,7 @@
         <RelativeLayout
             android:layout_width="149dp"
             android:layout_height="164dp"
-            android:layout_gravity="right|center_vertical" >
-
-            <Button
-                style="?android:attr/buttonStyleSmall"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/negativeFive"
-                android:id="@+id/button3"
-                android:enabled="true"
-                android:layout_marginTop="23dp"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentEnd="true" />
-
-            <Button
-                style="?android:attr/buttonStyleSmall"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/negativeOne"
-                android:id="@+id/button4"
-                android:layout_above="@+id/button6"
-                android:layout_alignParentStart="true" />
-
-            <Button
-                style="?android:attr/buttonStyleSmall"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/plusFive"
-                android:id="@+id/button5"
-                android:layout_gravity="center"
-                android:layout_alignTop="@+id/button6"
-                android:layout_alignParentEnd="true" />
-
-            <Button
-                style="?android:attr/buttonStyleSmall"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/plusOne"
-                android:id="@+id/button6"
-                android:layout_marginTop="21dp"
-                android:layout_below="@+id/button3"
-                android:layout_alignParentStart="true" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Health"
-                android:id="@+id/textView20"
-                android:layout_above="@+id/button4"
-                android:layout_centerHorizontal="true" />
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:layout_width="149dp"
-            android:layout_height="164dp"
-            android:layout_gravity="left|center_vertical"
+            android:layout_gravity="left|top"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:id="@+id/relativeLayout" >
@@ -342,6 +287,61 @@
                 android:layout_gravity="left|top"
                 android:layout_below="@+id/textView21"
                 android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="149dp"
+            android:layout_height="164dp"
+            android:layout_gravity="right|top" >
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/negativeFive"
+                android:id="@+id/button3"
+                android:enabled="true"
+                android:layout_marginTop="23dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true" />
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/negativeOne"
+                android:id="@+id/button4"
+                android:layout_above="@+id/button6"
+                android:layout_alignParentStart="true" />
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/plusFive"
+                android:id="@+id/button5"
+                android:layout_gravity="center"
+                android:layout_alignTop="@+id/button6"
+                android:layout_alignParentEnd="true" />
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/plusOne"
+                android:id="@+id/button6"
+                android:layout_marginTop="21dp"
+                android:layout_below="@+id/button3"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Health"
+                android:id="@+id/textView20"
+                android:layout_above="@+id/button4"
+                android:layout_centerHorizontal="true" />
         </RelativeLayout>
 
     </FrameLayout>
