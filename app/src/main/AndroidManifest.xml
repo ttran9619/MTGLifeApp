@@ -83,12 +83,15 @@
                 android:value="teamsb.mtglifeapp.MainActivity" />
         </activity>
         <activity
-            android:name=".VenmoTest"
-            android:label="@string/title_activity_venmo_test"
-            android:parentActivityName=".MainActivity" >
+            android:name=".VenmoWebViewActivity"
+            android:label="VenmoWebViewActivity" />
+        <activity
+            android:name=".PriceView"
+            android:label="@string/title_activity_price_view"
+            android:parentActivityName=".PCStart" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="teamsb.mtglifeapp.MainActivity" />
+                android:value="teamsb.mtglifeapp.PCStart" />
         </activity>
     </application>
 
