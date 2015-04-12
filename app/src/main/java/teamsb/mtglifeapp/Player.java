@@ -70,6 +70,10 @@ public class Player {
         turnCount+=1;
     }
 
+    public void subTurnCount(){
+        turnCount-=1;
+    }
+
     public int getInfectCounter(){
         return infectCounter;
     }

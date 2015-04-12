@@ -13,133 +13,6 @@
         android:layout_centerVertical="true"
         android:layout_alignParentEnd="true">
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="PASS TURN"
-            android:id="@+id/PassButton"
-            android:layout_gravity="center" />
-
-        <RelativeLayout
-            android:layout_width="161dp"
-            android:layout_height="126dp"
-            android:layout_gravity="center_horizontal|top" >
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Life"
-                android:id="@+id/HostLife"
-                android:enabled="true"
-                android:textSize="50dp"
-                android:textIsSelectable="true"
-                android:textColor="#ff0000"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Infect"
-                android:id="@+id/HostInfect"
-                android:focusable="false"
-                android:textColor="#10721e"
-                android:layout_alignBottom="@+id/HostTurnLight"
-                android:layout_toStartOf="@+id/HostName" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Turn#"
-                android:id="@+id/HostTurnCount"
-                android:textColor="#0000ff"
-                android:layout_alignBottom="@+id/HostTurnLight"
-                android:layout_toEndOf="@+id/HostName" />
-
-            <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/HostTurnLight"
-                android:layout_gravity="center_horizontal|bottom"
-                android:checked="false"
-                android:clickable="false"
-                android:layout_below="@+id/HostName"
-                android:layout_centerHorizontal="true" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Name"
-                android:id="@+id/HostName"
-                android:layout_centerVertical="true"
-                android:layout_centerHorizontal="true" />
-
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:layout_width="161dp"
-            android:layout_height="109dp"
-            android:layout_gravity="center_horizontal|bottom" >
-
-            <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/GuestTurnLight"
-                android:layout_gravity="center_horizontal|bottom"
-                android:checked="false"
-                android:layout_below="@+id/GuestName"
-                android:layout_centerHorizontal="true"
-                android:clickable="false" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Life"
-                android:id="@+id/GuestLife"
-                android:enabled="true"
-                android:textSize="30dp"
-                android:textIsSelectable="true"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true"
-                android:textColor="#ff0000" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Infect"
-                android:id="@+id/GuestInfect"
-                android:focusable="false"
-                android:layout_below="@+id/GuestName"
-                android:layout_toStartOf="@+id/GuestLife"
-                android:nestedScrollingEnabled="false"
-                android:textColor="#10721e" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Turn#"
-                android:id="@+id/GuestTurnCount"
-                android:layout_below="@+id/GuestName"
-                android:layout_toEndOf="@+id/GuestName"
-                android:textColor="#0000ff" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Name"
-                android:id="@+id/GuestName"
-                android:layout_below="@+id/GuestLife"
-                android:layout_centerHorizontal="true" />
-        </RelativeLayout>
-
         <RelativeLayout
             android:layout_width="149dp"
             android:layout_height="164dp"
@@ -196,6 +69,7 @@
                 android:layout_gravity="left|top"
                 android:layout_below="@+id/InfectTitle"
                 android:layout_alignParentEnd="true" />
+
         </RelativeLayout>
 
         <RelativeLayout
@@ -251,7 +125,199 @@
                 android:id="@+id/HealthTitle"
                 android:layout_above="@+id/HealthMinusOne"
                 android:layout_centerHorizontal="true" />
+
         </RelativeLayout>
 
+        <RelativeLayout
+            android:layout_width="249dp"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center">
+
+            <RelativeLayout
+                android:layout_width="161dp"
+                android:layout_height="161dp"
+                android:layout_gravity="center_horizontal|top"
+                android:id="@+id/relativeLayout2"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Life"
+                    android:id="@+id/HostLife"
+                    android:enabled="true"
+                    android:textSize="40dp"
+                    android:textIsSelectable="true"
+                    android:textColor="#ff0000"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Name"
+                    android:id="@+id/HostName"
+                    android:layout_below="@+id/HostLife"
+                    android:layout_centerHorizontal="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Infect"
+                    android:id="@+id/HostInfect"
+                    android:focusable="false"
+                    android:textColor="#10721e"
+                    android:layout_below="@+id/HostName"
+                    android:layout_toStartOf="@+id/HostName" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Turn#"
+                    android:id="@+id/HostTurnCount"
+                    android:textColor="#0000ff"
+                    android:layout_below="@+id/HostName"
+                    android:layout_toEndOf="@+id/HostName" />
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/HostTurnLight"
+                    android:layout_gravity="center_horizontal|bottom"
+                    android:checked="false"
+                    android:clickable="false"
+                    android:layout_below="@+id/HostInfect"
+                    android:layout_centerHorizontal="true" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/HostIndicator"
+                    android:checked="false"
+                    android:clickable="false"
+                    android:layout_alignParentTop="true"
+                    android:layout_toEndOf="@+id/HostLife" />
+
+                <ImageButton
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:id="@+id/HostLifeButton"
+                    android:clickable="true"
+                    android:background="@null"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignBottom="@+id/HostTurnLight" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="161dp"
+                android:layout_height="137dp"
+                android:layout_gravity="center_horizontal|bottom"
+                android:id="@+id/relativeLayout3"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Life"
+                    android:id="@+id/GuestLife"
+                    android:enabled="true"
+                    android:textSize="40dp"
+                    android:textIsSelectable="false"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="#ff0000" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Name"
+                    android:id="@+id/GuestName"
+                    android:layout_below="@+id/GuestLife"
+                    android:layout_centerHorizontal="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Infect"
+                    android:id="@+id/GuestInfect"
+                    android:focusable="false"
+                    android:nestedScrollingEnabled="false"
+                    android:textColor="#10721e"
+                    android:layout_below="@+id/GuestName"
+                    android:layout_toStartOf="@+id/GuestName" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Turn#"
+                    android:id="@+id/GuestTurnCount"
+                    android:textColor="#0000ff"
+                    android:layout_below="@+id/GuestName"
+                    android:layout_toEndOf="@+id/GuestName" />
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/GuestTurnLight"
+                    android:layout_gravity="center_horizontal|bottom"
+                    android:checked="false"
+                    android:clickable="false"
+                    android:layout_below="@+id/GuestInfect"
+                    android:layout_centerHorizontal="true" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/GuestIndicator"
+                    android:checked="false"
+                    android:clickable="false"
+                    android:layout_alignParentTop="true"
+                    android:layout_toEndOf="@+id/GuestLife" />
+
+                <ImageButton
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:id="@+id/GuestLifeButton"
+                    android:clickable="true"
+                    android:background="@null"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PASS TURN"
+            android:id="@+id/PassButton"
+            android:layout_gravity="right|bottom"
+            android:layout_above="@+id/relativeLayout3"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="18dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TAKE BACK"
+            android:id="@+id/BackButton"
+            android:layout_gravity="left|bottom"
+            android:layout_above="@+id/relativeLayout3"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="18dp" />
+
     </FrameLayout>
+
 </RelativeLayout>
