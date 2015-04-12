@@ -82,6 +82,10 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="teamsb.mtglifeapp.MainActivity" />
         </activity>
+        <activity
+            android:name=".VenmoWebViewActivity"
+            android:label="VenmoWebViewActivity" ></activity>
+
     </application>
 
 </manifest>
