@@ -29,8 +29,6 @@ public class LCLoginAct extends ActionBarActivity {
         start.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-
                 global.hostName = hostName.getText().toString();
                 global.guestName = guestName.getText().toString();
                 Intent intent = new Intent(v.getContext(), LifeHost.class);
