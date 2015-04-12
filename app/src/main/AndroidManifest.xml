@@ -59,8 +59,8 @@
         <activity
             android:name=".LifeHost"
             android:label="@string/title_activity_life_host"
-            android:screenOrientation="landscape"
-            android:parentActivityName=".LoginHost" >
+            android:parentActivityName=".LoginHost"
+            android:screenOrientation="landscape" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="teamsb.mtglifeapp.LoginHost" />
@@ -68,8 +68,8 @@
         <activity
             android:name=".LifeSlave"
             android:label="@string/title_activity_life_slave"
-            android:screenOrientation="landscape"
-            android:parentActivityName=".LoginSlave" >
+            android:parentActivityName=".LoginSlave"
+            android:screenOrientation="landscape" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="teamsb.mtglifeapp.LoginSlave" />
@@ -83,9 +83,13 @@
                 android:value="teamsb.mtglifeapp.MainActivity" />
         </activity>
         <activity
-            android:name=".VenmoWebViewActivity"
-            android:label="VenmoWebViewActivity" ></activity>
-
+            android:name=".VenmoTest"
+            android:label="@string/title_activity_venmo_test"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="teamsb.mtglifeapp.MainActivity" />
+        </activity>
     </application>
 
 </manifest>
