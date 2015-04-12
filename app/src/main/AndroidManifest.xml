@@ -13,7 +13,8 @@
     <android:uses-permission
         android:name="android.permission.WRITE_EXTERNAL_STORAGE"
         android:maxSdkVersion="18" />
-    <android:uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <android:uses-permission
+        android:name="android.permission.READ_PHONE_STATE" />
     <android:uses-permission
         android:name="android.permission.READ_EXTERNAL_STORAGE"
         android:maxSdkVersion="19" />
@@ -74,6 +75,15 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="teamsb.mtglifeapp.LoginSlave" />
+        </activity>
+        <activity
+            android:name=".VenmoTest"
+            android:label="@string/title_activity_venmo_test"
+            android:parentActivityName=".PCStart"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="teamsb.mtglifeapp.PCStart" />
         </activity>
         <activity
             android:name=".PCStart"

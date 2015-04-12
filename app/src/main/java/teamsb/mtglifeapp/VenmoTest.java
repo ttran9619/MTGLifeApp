@@ -16,8 +16,7 @@ public class VenmoTest extends ActionBarActivity {
 
     EditText appId, recipient, amount, note;
     Button pay, charge;
-    final static int REQUEST_CODE_VENMO_APP_SWITCH = 1;
-
+    final int REQUEST_CODE_VENMO_APP_SWITCH = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,10 +39,11 @@ public class VenmoTest extends ActionBarActivity {
                 String am = amount.getText().toString();
                 String n = note.getText().toString();
                 String p = "pay";
-                if (VenmoLibrary.isVenmoInstalled(getApplicationContext())) {
+                try  {
                     Intent venmoIntent = VenmoLibrary.openVenmoPayment(app, "MTGLifeApp", rec, am, n, p);
                     startActivityForResult(venmoIntent, REQUEST_CODE_VENMO_APP_SWITCH);
-                } else {
+                } catch (android.content.ActivityNotFoundException e){
+
                     Context context = getApplicationContext();
                     CharSequence text = "Venmo Installation Not Detected";
                     int duration = Toast.LENGTH_SHORT;
@@ -63,10 +63,10 @@ public class VenmoTest extends ActionBarActivity {
                 String am = amount.getText().toString();
                 String n = note.getText().toString();
                 String p = "charge";
-                if (VenmoLibrary.isVenmoInstalled(getApplicationContext())) {
+                try {
                     Intent venmoIntent = VenmoLibrary.openVenmoPayment(app, "MTGLifeApp", rec, am, n, p);
                     startActivityForResult(venmoIntent, REQUEST_CODE_VENMO_APP_SWITCH);
-                } else {
+                }  catch (android.content.ActivityNotFoundException e){
                     Context context = getApplicationContext();
                     CharSequence text = "Venmo Installation Not Detected";
                     int duration = Toast.LENGTH_SHORT;
@@ -78,56 +78,52 @@ public class VenmoTest extends ActionBarActivity {
 
             }
         });
-    }
-
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data)
-    {
-        switch(requestCode) {
-            case REQUEST_CODE_VENMO_APP_SWITCH: {
-                if(resultCode == RESULT_OK) {
-                    String signedrequest = data.getStringExtra("signedrequest");
-                    if(signedrequest != null) {
-                        VenmoLibrary.VenmoResponse response = (new VenmoLibrary()).validateVenmoPaymentResponse(signedrequest, "thisappisnice");
-                        if(response.getSuccess().equals("1")) {
-                            //Payment successful.  Use data from response object to display a success message
-                            String note = response.getNote();
-                            String amount = response.getAmount();
-                        }
-                    }
-                    else {
-                        String error_message = data.getStringExtra("error_message");
-                        //An error ocurred.  Make sure to display the error_message to the user
-                    }
-                }
-                else if(resultCode == RESULT_CANCELED) {
-                    //The user cancelled the payment
-                }
-                break;
             }
-        }
-    }
 
             @Override
-            public boolean onCreateOptionsMenu(Menu menu) {
-                // Inflate the menu; this adds items to the action bar if it is present.
+            protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+                switch (requestCode) {
+                    case REQUEST_CODE_VENMO_APP_SWITCH: {
+                        if (resultCode == RESULT_OK) {
+                            String signedrequest = data.getStringExtra("signedrequest");
+                            if (signedrequest != null) {
+                                VenmoLibrary.VenmoResponse response = (new VenmoLibrary()).validateVenmoPaymentResponse(signedrequest, "TUzLetByjsqy9vj2pDaeqVM7HTx926Vm");
+                                if (response.getSuccess().equals("1")) {
+                                    //Payment successful.  Use data from response object to display a success message
+                                    String note = response.getNote();
+                                    String amount = response.getAmount();
+                                }
+                            } else {
+                                String error_message = data.getStringExtra("error_message");
+                                //An error ocurred.  Make sure to display the error_message to the user
+                            }
+                        } else if (resultCode == RESULT_CANCELED) {
+                            //The user cancelled the payment
+                        }
+                        break;
+                    }
+                }
+            }
+        @Override
+        public boolean onCreateOptionsMenu (Menu menu){
+            // Inflate the menu; this adds items to the action bar if it is present.
+            getMenuInflater().inflate(R.menu.menu_venmo_test, menu);
+            return true;
+        }
+
+        @Override
+        public boolean onOptionsItemSelected (MenuItem item){
+            // Handle action bar item clicks here. The action bar will
+            // automatically handle clicks on the Home/Up button, so long
+            // as you specify a parent activity in AndroidManifest.xml.
+            int id = item.getItemId();
+
+            //noinspection SimplifiableIfStatement
+            if (id == R.id.action_settings) {
                 return true;
             }
 
-            @Override
-            public boolean onOptionsItemSelected(MenuItem item) {
-                // Handle action bar item clicks here. The action bar will
-                // automatically handle clicks on the Home/Up button, so long
-                // as you specify a parent activity in AndroidManifest.xml.
-                int id = item.getItemId();
-
-                //noinspection SimplifiableIfStatement
-                if (id == R.id.action_settings) {
-                    return true;
-                }
-
-                return super.onOptionsItemSelected(item);
-            }
-
+            return super.onOptionsItemSelected(item);
+        }
 
     }
