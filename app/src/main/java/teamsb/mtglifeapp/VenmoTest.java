@@ -14,7 +14,7 @@ import android.widget.Toast;
 
 public class VenmoTest extends ActionBarActivity {
 
-    EditText appId, recipient, amount, note;
+    EditText recipient, amount, note;
     Button pay, charge;
     final int REQUEST_CODE_VENMO_APP_SWITCH = 1;
 
