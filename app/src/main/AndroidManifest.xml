@@ -35,7 +35,8 @@
         <activity
             android:name=".LCLoginAct"
             android:label="@string/title_activity_lclogin"
-            android:parentActivityName=".MainActivity" >
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="teamsb.mtglifeapp.MainActivity" />
@@ -77,7 +78,8 @@
         <activity
             android:name=".PCStart"
             android:label="@string/title_activity_pcstart"
-            android:parentActivityName=".MainActivity" >
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="teamsb.mtglifeapp.MainActivity" />
@@ -88,7 +90,8 @@
         <activity
             android:name=".PriceView"
             android:label="@string/title_activity_price_view"
-            android:parentActivityName=".PCStart" >
+            android:parentActivityName=".PCStart"
+            android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="teamsb.mtglifeapp.PCStart" />
