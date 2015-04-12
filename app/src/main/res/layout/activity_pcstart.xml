@@ -12,33 +12,46 @@
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true">
 
-        <LinearLayout
-            android:orientation="vertical"
+        <RelativeLayout
             android:layout_width="fill_parent"
-            android:layout_height="fill_parent">
+            android:layout_height="271dp"
+            android:layout_below="@+id/cardPrice"
+            android:layout_alignParentStart="true"
+            android:layout_gravity="center_horizontal|bottom">
 
-            <RelativeLayout
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Venmo Transaction"
+                android:id="@+id/venmoTran"
+                android:layout_gravity="right|top"
+                android:layout_marginBottom="71dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true" />
 
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Find Card Price"
-                    android:id="@+id/cardPrice"
-                    android:layout_marginTop="147dp"
-                    android:layout_alignParentTop="true"
-                    android:layout_centerHorizontal="true" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Find Card Price"
+                android:id="@+id/cardPrice"
+                android:layout_gravity="left|center_vertical"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="71dp" />
+        </RelativeLayout>
 
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Venmo Transaction"
-                    android:id="@+id/venmoTran"
-                    android:layout_marginTop="143dp"
-                    android:layout_below="@+id/cardPrice"
-                    android:layout_centerHorizontal="true" />
-            </RelativeLayout>
-        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="271dp"
+            android:layout_gravity="center_horizontal|top">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView"
+                android:layout_alignParentStart="true"
+                android:src="@mipmap/money" />
+        </RelativeLayout>
+
     </FrameLayout>
 </RelativeLayout>

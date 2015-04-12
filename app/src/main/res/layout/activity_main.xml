@@ -9,38 +9,67 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent">
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Price Counter"
-            android:id="@+id/PC"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="122dp"
-            android:textSize="25dp"
-            android:layout_gravity="center_horizontal|bottom" />
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="448dp"
+            android:layout_gravity="center_horizontal|bottom">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Life Counter"
-            android:id="@+id/textView"
-            android:layout_marginTop="37dp"
-            android:textSize="30dp"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_gravity="center_horizontal|top" />
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true">
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Life Counter"
-            android:id="@+id/LC"
-            android:layout_marginTop="121dp"
-            android:textSize="25dp"
-            android:layout_below="@+id/textView"
-            android:layout_centerHorizontal="true"
-            android:layout_gravity="center_horizontal|top" />
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="245dp"
+                    android:layout_gravity="center_horizontal|bottom">
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Price Tools"
+                        android:id="@+id/PC"
+                        android:textSize="25dp"
+                        android:layout_gravity="center_horizontal|bottom"
+                        android:layout_marginBottom="40dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Life Counter"
+                        android:id="@+id/LC"
+                        android:textSize="25dp"
+                        android:layout_gravity="center"
+                        android:layout_centerVertical="true"
+                        android:layout_centerHorizontal="true" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="195dp"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="A Super Starbuck App"
+                    android:id="@+id/textView"
+                    android:textSize="30dp"
+                    android:layout_gravity="center"
+                    android:layout_above="@+id/LC"
+                    android:layout_centerHorizontal="true" />
+
+            </FrameLayout>
+
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:id="@+id/logo"
+            android:layout_gravity="center_horizontal|top"
+            android:src="@mipmap/mtg"
+            android:layout_alignParentStart="true" />
+
     </FrameLayout>
 </RelativeLayout>
