@@ -16,12 +16,10 @@ public class LifeHost extends ActionBarActivity {
     Button  heaM1, heaM5, heaP1, heaP5;
     Button pass;
 
-    TextView HLife, HInfect, HTCount;
-    TextView P2Life, P2Infect, P2TCount, P2Name;
-    TextView P3Life, P3Infect, P3TCount, P3Name;
-    TextView P4Life, P4Infect, P4TCount, P4Name;
+    TextView HLife, HInfect, HTCount, HName;
+    TextView GLife, GInfect, GTCount, GName;
 
-    CheckBox HostLight, Player2Light, Player3Light, Player4Light;
+    CheckBox HostLight, GuestLight;
 
 
 
@@ -33,9 +31,8 @@ public class LifeHost extends ActionBarActivity {
 
 
         final Player host = new Player ("Tyler");
-        final Player player2 = new Player ("Tim");
-        final Player player3 = new Player ("Adam");
-        final Player player4 = new Player ("Erica");
+        final Player guest = new Player ("Tim");
+
 
 
         HLife = (TextView) findViewById(R.id.HostLife);
@@ -44,33 +41,19 @@ public class LifeHost extends ActionBarActivity {
         HInfect.setText(""+host.getInfectCounter());
         HTCount = (TextView) findViewById(R.id.HostTurnCount);
         HTCount.setText(""+host.getTurnCount());
+        HName = (TextView) findViewById(R.id.HostName);
+        HName.setText(""+host.getName());
 
-        P2Life = (TextView) findViewById(R.id.Player2Life);
-        P2Life.setText(""+player2.getLife());
-        P2Infect = (TextView) findViewById(R.id.Player2Infect);
-        P2Infect.setText(""+player2.getInfectCounter());
-        P2TCount = (TextView) findViewById(R.id.Player2TurnCount);
-        P2TCount.setText(""+player2.getTurnCount());
-        P2Name = (TextView) findViewById(R.id.Player2Name);
-        P2Name.setText(""+player2.getName());
 
-        P3Life = (TextView) findViewById(R.id.Player3Life);
-        P3Life.setText(""+player3.getLife());
-        P3Infect = (TextView) findViewById(R.id.Player3Infect);
-        P3Infect.setText(""+player3.getInfectCounter());
-        P3TCount = (TextView) findViewById(R.id.Player3TurnCount);
-        P3TCount.setText(""+player3.getTurnCount());
-        P3Name = (TextView) findViewById(R.id.Player3Name);
-        P3Name.setText(""+player3.getName());
+        GLife = (TextView) findViewById(R.id.GuestLife);
+        GLife.setText(""+guest.getLife());
+        GInfect = (TextView) findViewById(R.id.GuestInfect);
+        GInfect.setText(""+guest.getInfectCounter());
+        GTCount = (TextView) findViewById(R.id.GuestTurnCount);
+        GTCount.setText(""+guest.getTurnCount());
+        GName = (TextView) findViewById(R.id.GuestName);
+        GName.setText(""+guest.getName());
 
-        P4Life = (TextView) findViewById(R.id.Player4Life);
-        P4Life.setText(""+player4.getLife());
-        P4Infect = (TextView) findViewById(R.id.Player4Infect);
-        P4Infect.setText(""+player4.getInfectCounter());
-        P4TCount = (TextView) findViewById(R.id.Player4TurnCount);
-        P4TCount.setText(""+player4.getTurnCount());
-        P4Name = (TextView) findViewById(R.id.Player4Name);
-        P4Name.setText(""+player3.getName());
 
 
 
@@ -87,9 +70,7 @@ public class LifeHost extends ActionBarActivity {
         pass = (Button) findViewById(R.id.PassButton);
 
         HostLight = (CheckBox) findViewById(R.id.HostTurnLight);
-        Player2Light = (CheckBox) findViewById(R.id.Player2TurnLight);
-        Player3Light = (CheckBox) findViewById(R.id.Player3TurnLight);
-        Player4Light = (CheckBox) findViewById(R.id.Player4TurnLight);
+        GuestLight = (CheckBox) findViewById(R.id.GuestTurnLight);
 
         HostLight.setChecked(true);
         host.takeTurn();
@@ -170,13 +151,13 @@ public class LifeHost extends ActionBarActivity {
 
                 if(host.getTurnStatus()){
                     host.passTurn();
-                    player2.takeTurn();
+                    guest.takeTurn();
 
                     host.addTurnCount();;
                     HTCount.setText(""+host.getTurnCount());
 
                     HostLight.setChecked(host.getTurnStatus());
-                    Player2Light.setChecked(player2.getTurnStatus());
+                    GuestLight.setChecked(guest.getTurnStatus());
                 }
 
             }
