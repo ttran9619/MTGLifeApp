@@ -13,12 +13,12 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/icon"
-        android:label="@string/app_name"
+        android:label="MTG Life"
         android:theme="@style/AppTheme"
         android:screenOrientation="portrait">
         <activity
             android:name=".MainActivity"
-            android:label="@string/app_name"
+            android:label="MTG Life"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
