@@ -11,7 +11,7 @@ import android.widget.Button;
 
 public class PCStart extends ActionBarActivity {
 
-    Button venmoTrans;
+    Button venmoTrans, priceButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,10 +19,20 @@ public class PCStart extends ActionBarActivity {
 
         venmoTrans = (Button) findViewById(R.id.venmoTran);
 
+        priceButton = (Button) findViewById(R.id.cardPrice);
+
         venmoTrans.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(v.getContext(), VenmoTest.class);
+                startActivity(intent);
+            }
+        });
+
+        priceButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), PriceView.class);
                 startActivity(intent);
             }
         });
