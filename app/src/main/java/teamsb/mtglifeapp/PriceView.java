@@ -4,23 +4,33 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Button;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 
 
-public class PCStart extends ActionBarActivity {
+public class PriceView extends ActionBarActivity {
+
+    WebView web;
+
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_pcstart);
+        setContentView(R.layout.activity_price_view);
+
+        web = (WebView) findViewById(R.id.webView);
+
+        web.getSettings().setJavaScriptEnabled(true);
+        web.loadUrl("http://magic.tcgplayer.com/db/pricefinder.asp");
+        web.setWebViewClient(new WebViewClient());
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_pcstart, menu);
+        getMenuInflater().inflate(R.menu.menu_price_view, menu);
         return true;
     }
 
