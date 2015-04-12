@@ -1,9 +1,7 @@
 package teamsb.mtglifeapp;
 
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.support.v7.app.ActionBarActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -103,12 +101,18 @@ public class LifeHost extends ActionBarActivity {
         heaM1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(hIndi.isChecked()){
+                if(hIndi.isChecked()&&host.getLife()>0){
                     host.subLife(1);
+                    if(host.getLife()<0){
+                        host.setLife(0);
+                    }
                     HLife.setText(""+host.getLife());
                 }else
-                if(gIndi.isChecked()){
+                if(gIndi.isChecked()&&guest.getLife()>0){
                     guest.subLife(1);
+                    if(guest.getLife()<0){
+                        guest.setLife(0);
+                    }
                     GLife.setText(""+guest.getLife());
                 }
             }
@@ -117,12 +121,18 @@ public class LifeHost extends ActionBarActivity {
         heaM5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(hIndi.isChecked()){
+                if(hIndi.isChecked()&&host.getLife()>0){
                     host.subLife(5);
+                    if(host.getLife()<0){
+                        host.setLife(0);
+                    }
                     HLife.setText(""+host.getLife());
                 }
-                if(gIndi.isChecked()){
+                if(gIndi.isChecked()&&guest.getLife()>0){
                     guest.subLife(5);
+                    if(guest.getLife()<0){
+                        guest.setLife(0);
+                    }
                     GLife.setText(""+guest.getLife());
                 }
             }
@@ -161,11 +171,17 @@ public class LifeHost extends ActionBarActivity {
             public void onClick(View v) {
                 if(hIndi.isChecked()){
                     host.subInfect(1);
+                    if(host.getInfectCounter()<0){
+                        host.setInfect(0);
+                    }
                     HLife.setText(""+host.getLife());
                     HInfect.setText(""+host.getInfectCounter());
                 }else
                 if(gIndi.isChecked()){
                     guest.subInfect(1);
+                    if(guest.getInfectCounter()<0){
+                       guest.setInfect(0);
+                    }
                     GLife.setText(""+guest.getLife());
                     GInfect.setText(""+guest.getInfectCounter());
                 }
@@ -178,11 +194,17 @@ public class LifeHost extends ActionBarActivity {
             public void onClick(View v) {
                 if(hIndi.isChecked()){
                     host.subInfect(5);
+                    if(host.getInfectCounter()<0){
+                        host.setInfect(0);
+                    }
                     HLife.setText(""+host.getLife());
                     HInfect.setText(""+host.getInfectCounter());
                 }else
                 if(gIndi.isChecked()){
                     guest.subInfect(5);
+                    if(guest.getInfectCounter()<0){
+                        guest.setInfect(0);
+                    }
                     GLife.setText(""+guest.getLife());
                     GInfect.setText(""+guest.getInfectCounter());
                 }
@@ -192,13 +214,19 @@ public class LifeHost extends ActionBarActivity {
         infP1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(hIndi.isChecked()){
+                if(hIndi.isChecked()&&host.getLife()>0){
                     host.addInfect(1);
+                    if(host.getLife()<0){
+                        host.setLife(0);
+                    }
                     HLife.setText(""+host.getLife());
                     HInfect.setText(""+host.getInfectCounter());
                 }else
-                if(gIndi.isChecked()){
+                if(gIndi.isChecked()&&guest.getLife()>0){
                     guest.addInfect(1);
+                    if(guest.getLife()<0){
+                        guest.setLife(0);
+                    }
                     GLife.setText(""+guest.getLife());
                     GInfect.setText(""+guest.getInfectCounter());
                 }
@@ -208,13 +236,19 @@ public class LifeHost extends ActionBarActivity {
         infP5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(hIndi.isChecked()){
+                if(hIndi.isChecked()&&host.getLife()>0){
                     host.addInfect(5);
+                    if(host.getLife()<0){
+                        host.setLife(0);
+                    }
                     HLife.setText(""+host.getLife());
                     HInfect.setText(""+host.getInfectCounter());
                 }else
-                if(gIndi.isChecked()){
+                if(gIndi.isChecked()&&guest.getLife()>0){
                     guest.addInfect(5);
+                    if(guest.getLife()<0){
+                        guest.setLife(0);
+                    }
                     GLife.setText(""+guest.getLife());
                     GInfect.setText(""+guest.getInfectCounter());
                 }

@@ -43,12 +43,24 @@ public class Player {
     }
 
     public void subInfect(int toSub){
+        if(infectCounter!=0){
+            life += toSub;
+        }
         infectCounter -= toSub;
-        life += toSub;
+
+
     }
 
     public int getLife(){
         return life;
+    }
+
+    public void setLife(int toAdd){
+        life = toAdd;
+    }
+
+    public void setInfect(int toAdd){
+        infectCounter = toAdd;
     }
 
     public boolean getTurnStatus(){
@@ -72,6 +84,9 @@ public class Player {
 
     public void subTurnCount(){
         turnCount-=1;
+        if(turnCount<0){
+            turnCount=0;
+        }
     }
 
     public int getInfectCounter(){
