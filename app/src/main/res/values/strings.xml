@@ -13,4 +13,5 @@
     <string name="negativeFive">-5</string>
     <string name="plusOne">+1</string>
     <string name="plusFive">+5</string>
+    <string name="title_activity_venmo_test">VenmoTest</string>
 </resources>

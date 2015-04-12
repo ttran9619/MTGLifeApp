@@ -10,5 +10,35 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"></FrameLayout>
+        android:layout_centerHorizontal="true">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Find Card Price"
+                    android:id="@+id/cardPrice"
+                    android:layout_marginTop="147dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Venmo Transaction"
+                    android:id="@+id/venmoTran"
+                    android:layout_marginTop="143dp"
+                    android:layout_below="@+id/cardPrice"
+                    android:layout_centerHorizontal="true" />
+            </RelativeLayout>
+        </LinearLayout>
+    </FrameLayout>
 </RelativeLayout>
