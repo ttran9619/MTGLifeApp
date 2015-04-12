@@ -16,7 +16,7 @@ public class VenmoTest extends ActionBarActivity {
 
     EditText appId, recipient, amount, note;
     Button pay, charge;
-    final int REQUEST_CODE_VENMO_APP_SWITCH = 1;
+
 
 
     @Override
@@ -42,7 +42,7 @@ public class VenmoTest extends ActionBarActivity {
                 String p = "pay";
                 if (VenmoLibrary.isVenmoInstalled(getApplicationContext())) {
                     Intent venmoIntent = VenmoLibrary.openVenmoPayment(app, "MTGLifeApp", rec, am, n, p);
-                    startActivityForResult(venmoIntent, REQUEST_CODE_VENMO_APP_SWITCH);
+                    startActivityForResult(venmoIntent, 1);
                 } else {
                     Context context = getApplicationContext();
                     CharSequence text = "Venmo Installation Not Detected";
@@ -65,7 +65,7 @@ public class VenmoTest extends ActionBarActivity {
                 String p = "charge";
                 if (VenmoLibrary.isVenmoInstalled(getApplicationContext())) {
                     Intent venmoIntent = VenmoLibrary.openVenmoPayment(app, "MTGLifeApp", rec, am, n, p);
-                    startActivityForResult(venmoIntent, REQUEST_CODE_VENMO_APP_SWITCH);
+                    startActivityForResult(venmoIntent, 1);
                 } else {
                     Context context = getApplicationContext();
                     CharSequence text = "Venmo Installation Not Detected";
@@ -84,11 +84,11 @@ public class VenmoTest extends ActionBarActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data)
     {
         switch(requestCode) {
-            case REQUEST_CODE_VENMO_APP_SWITCH: {
+            case 1: {
                 if(resultCode == RESULT_OK) {
                     String signedrequest = data.getStringExtra("signedrequest");
                     if(signedrequest != null) {
-                        VenmoLibrary.VenmoResponse response = (new VenmoLibrary()).validateVenmoPaymentResponse(signedrequest, "thisappisnice");
+                        VenmoLibrary.VenmoResponse response = (new VenmoLibrary()).validateVenmoPaymentResponse(signedrequest, "thisAppIsNice");
                         if(response.getSuccess().equals("1")) {
                             //Payment successful.  Use data from response object to display a success message
                             String note = response.getNote();
