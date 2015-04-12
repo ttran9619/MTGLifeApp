@@ -50,6 +50,22 @@
 
             </FrameLayout>
 
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="262dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:id="@+id/logo"
+                android:layout_gravity="center_horizontal|top"
+                android:src="@mipmap/mtg"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginBottom="104dp" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="55dp"
@@ -58,19 +74,9 @@
                 android:id="@+id/textView"
                 android:textSize="30dp"
                 android:layout_gravity="center_horizontal|top"
-                android:layout_marginTop="64dp"
-                android:layout_alignParentTop="true"
+                android:layout_alignParentBottom="true"
                 android:layout_centerHorizontal="true" />
-
         </RelativeLayout>
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:id="@+id/logo"
-            android:layout_gravity="center_horizontal|top"
-            android:src="@mipmap/mtg"
-            android:layout_alignParentStart="true" />
 
     </FrameLayout>
 </RelativeLayout>
