@@ -1,49 +1,36 @@
 package teamsb.mtglifeapp;
 
-import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 
 
-public class PCStart extends ActionBarActivity {
+public class PriceView extends ActionBarActivity {
 
-    Button venmoTrans, priceButton;
+    WebView web;
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_pcstart);
+        setContentView(R.layout.activity_price_view);
 
-        venmoTrans = (Button) findViewById(R.id.venmoTran);
+        web = (WebView) findViewById(R.id.webView);
 
-        priceButton = (Button) findViewById(R.id.cardPrice);
-
-        venmoTrans.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(v.getContext(), VenmoTest.class);
-                startActivity(intent);
-            }
-        });
-
-        priceButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(v.getContext(), PriceView.class);
-                startActivity(intent);
-            }
-        });
-
+        web.getSettings().setJavaScriptEnabled(true);
+        web.loadUrl("http://magic.tcgplayer.com/db/pricefinder.asp");
+        web.setWebViewClient(new WebViewClient());
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_pcstart, menu);
+        getMenuInflater().inflate(R.menu.menu_price_view, menu);
         return true;
     }
 

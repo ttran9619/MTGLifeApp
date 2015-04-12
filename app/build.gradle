@@ -23,4 +23,5 @@ dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     compile 'com.android.support:appcompat-v7:22.0.0'
     compile files('C:/Users/Ryan/AndroidStudioProjects/MTGLifeApp/.idea/libraries/json-simple-1.1.1.jar')
+    compile files('C:/Users/ttran_000/AndroidStudioProjects/MTGLifeApp/.idea/libraries/json-simple-1.1.1.jar')
 }
