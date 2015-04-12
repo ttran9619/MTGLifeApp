@@ -23,7 +23,7 @@ public class VenmoTest extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_venmo_test);
 
-        appId = (EditText) findViewById(R.id.venmoid);
+
         recipient = (EditText) findViewById(R.id.friendsVenmo);
         amount = (EditText) findViewById(R.id.amount);
         note = (EditText) findViewById(R.id.note);
@@ -34,13 +34,12 @@ public class VenmoTest extends ActionBarActivity {
         pay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String app = appId.getText().toString();
                 String rec = recipient.getText().toString();
                 String am = amount.getText().toString();
                 String n = note.getText().toString();
                 String p = "pay";
                 try  {
-                    Intent venmoIntent = VenmoLibrary.openVenmoPayment(app, "MTGLifeApp", rec, am, n, p);
+                    Intent venmoIntent = VenmoLibrary.openVenmoPayment("2535", "MTGLifeApp", rec, am, n, p);
                     startActivityForResult(venmoIntent, REQUEST_CODE_VENMO_APP_SWITCH);
                 } catch (android.content.ActivityNotFoundException e){
 
@@ -58,13 +57,12 @@ public class VenmoTest extends ActionBarActivity {
         charge.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String app = appId.getText().toString();
                 String rec = recipient.getText().toString();
                 String am = amount.getText().toString();
                 String n = note.getText().toString();
                 String p = "charge";
                 try {
-                    Intent venmoIntent = VenmoLibrary.openVenmoPayment(app, "MTGLifeApp", rec, am, n, p);
+                    Intent venmoIntent = VenmoLibrary.openVenmoPayment("2535", "MTGLifeApp", rec, am, n, p);
                     startActivityForResult(venmoIntent, REQUEST_CODE_VENMO_APP_SWITCH);
                 }  catch (android.content.ActivityNotFoundException e){
                     Context context = getApplicationContext();
