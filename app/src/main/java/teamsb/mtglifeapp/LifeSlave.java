@@ -41,7 +41,7 @@ public class LifeSlave extends ActionBarActivity {
         HInfect.setText(""+host.getInfectCounter());
         HTCount = (TextView) findViewById(R.id.HostTurnCount);
         HTCount.setText(""+host.getTurnCount());
-        HName = (TextView) findViewById(R.id.HostName);
+        HName = (TextView) findViewById(R.id.GuestName);
         HName.setText(""+host.getName());
 
         GLife = (TextView) findViewById(R.id.GuestLife);

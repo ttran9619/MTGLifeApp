@@ -29,10 +29,8 @@ public class LifeHost extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_life_host);
 
-
-        final Player host = new Player ("Tyler");
-        final Player guest = new Player ("Tim");
-
+        final Player host = new Player (global.hostName);
+        final Player guest = new Player (global.guestName);
 
 
         HLife = (TextView) findViewById(R.id.HostLife);

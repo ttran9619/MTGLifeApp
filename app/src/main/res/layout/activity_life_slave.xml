@@ -167,7 +167,7 @@
                 android:id="@+id/HostTurnLight"
                 android:layout_gravity="center_horizontal|bottom"
                 android:checked="false"
-                android:layout_below="@+id/HostName"
+                android:layout_below="@+id/GuestName"
                 android:layout_centerHorizontal="true" />
 
             <TextView
@@ -175,7 +175,7 @@
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="Name"
-                android:id="@+id/HostName"
+                android:id="@+id/GuestName"
                 android:layout_below="@+id/HostLife"
                 android:layout_centerHorizontal="true" />
         </RelativeLayout>

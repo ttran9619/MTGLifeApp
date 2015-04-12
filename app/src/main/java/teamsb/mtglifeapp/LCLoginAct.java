@@ -7,35 +7,37 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
 
 public class LCLoginAct extends ActionBarActivity {
 
-    Button Jbtn,Hbtn;
+    Button start;
+
+    EditText hostName, guestName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lclogin);
 
-        Jbtn = (Button) findViewById(R.id.JoinB);
-        Hbtn = (Button) findViewById(R.id.HostB);
+        start = (Button) findViewById(R.id.StartButton);
+        hostName = (EditText) findViewById(R.id.HostName);
+        guestName = (EditText) findViewById(R.id.GuestName);
 
-        Jbtn.setOnClickListener(new View.OnClickListener() {
+
+        start.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(v.getContext(), LoginSlave.class);
+
+
+                global.hostName = hostName.getText().toString();
+                global.guestName = guestName.getText().toString();
+                Intent intent = new Intent(v.getContext(), LifeHost.class);
                 startActivity(intent);
             }
         });
 
-        Hbtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(v.getContext(), LoginHost.class);
-                startActivity(intent);
-            }
-        });
     }
 
     @Override

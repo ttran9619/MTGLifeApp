@@ -15,23 +15,14 @@
 
         <RelativeLayout
             android:layout_width="242dp"
-            android:layout_height="157dp"
+            android:layout_height="83dp"
             android:layout_gravity="center_horizontal|top">
-
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/editText"
-                android:layout_alignParentBottom="true"
-                android:layout_toStartOf="@+id/textView2"
-                android:layout_marginEnd="30dp"
-                android:layout_marginBottom="35dp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Name:"
+                android:text="LifeCounter Setup"
                 android:id="@+id/textView2"
                 android:layout_marginTop="35dp"
                 android:layout_alignParentTop="true"
@@ -40,32 +31,85 @@
         </RelativeLayout>
 
         <RelativeLayout
-            android:layout_width="147dp"
-            android:layout_height="150dp"
-            android:layout_gravity="left|bottom">
+            android:layout_width="290dp"
+            android:layout_height="284dp"
+            android:layout_gravity="center">
+
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true">
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="117dp"
+                    android:layout_gravity="center_horizontal|top">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Player1"
+                        android:id="@+id/textView7"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true" />
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/HostName"
+                        android:inputType="text"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentStart="true" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="120dp"
+                    android:layout_gravity="center_horizontal|bottom">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Player2"
+                        android:id="@+id/textView8"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true" />
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/GuestName"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentStart="true"
+                        android:inputType="text" />
+
+                </RelativeLayout>
+            </FrameLayout>
+        </RelativeLayout>
+
+        <FrameLayout
+            android:layout_width="349dp"
+            android:layout_height="125dp"
+            android:layout_gravity="center_horizontal|bottom"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true">
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Join"
-                android:id="@+id/JoinB"
-                android:layout_centerVertical="true"
+                android:text="Start"
+                android:id="@+id/StartButton"
+                android:layout_gravity="center"
+                android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true" />
-        </RelativeLayout>
+        </FrameLayout>
 
-        <RelativeLayout
-            android:layout_width="147dp"
-            android:layout_height="150dp"
-            android:layout_gravity="right|bottom" >
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Host"
-                android:id="@+id/HostB"
-                android:layout_centerVertical="true"
-                android:layout_centerHorizontal="true" />
-        </RelativeLayout>
     </FrameLayout>
 
 </RelativeLayout>
